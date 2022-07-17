@@ -1,11 +1,12 @@
 :root {
+  --color-light-100: #dededf;
   --color-light-300: #f2efef;
   --color-light-500: #FFFFFE;
   --color-dark-500: #232946;
   --color-dark-800: #485284;
-  --color-primary-500: #EEBBC3;
-  --color-secondary-500: #B8C1EC;
-  --color-secondary-000: #B8C1EC55;
+  --color-primary-500: #B8C1EC;
+  --color-primary-000: #B8C1EC55;
+  --color-danger-500: #cd4c4c;
 }
 
 
@@ -21,4 +22,13 @@ body, html {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+input {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 }
