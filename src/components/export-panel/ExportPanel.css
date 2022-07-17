@@ -1,0 +1,7 @@
+.export-panel {
+    right: 0;
+}
+
+.export-panel.hidden {
+   transform: translateX(100%);
+}

@@ -1,0 +1,19 @@
+.content-section {
+    padding:1rem;
+    
+}
+
+
+
+
+@media all and (min-width: 767px) {
+    .content-section {
+        transition: margin 0.35s ease;
+    }
+    .content-section.left-open {
+        margin-left: 16rem;
+    }
+    .content-section.right-open {
+        margin-right: 16rem;
+    }
+}

@@ -1,0 +1,7 @@
+.nav-panel {
+    left:0;
+}
+
+.nav-panel.hidden {
+    transform: translateX(-100%);
+}

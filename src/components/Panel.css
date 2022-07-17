@@ -1,0 +1,26 @@
+.panel {
+    height:100%;
+    position: fixed;
+    max-height: calc(100vh - 3.4rem);
+    width:16rem;
+    background-color: var(--color-light-300);
+    transition: transform 0.35s ease;
+    padding:0.75rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.panel h2 {
+    font-size: 1.35rem;
+    text-align: center;
+    font-weight: 500;
+    margin:0.25rem 0;
+    /* text-transform: uppercase; */
+}
+
+
+@media all and (max-width: 767px) {
+    .panel {
+        width: 100%;
+    }
+}

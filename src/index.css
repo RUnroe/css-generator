@@ -1,4 +1,5 @@
 :root {
+  --color-light-300: #f2efef;
   --color-light-500: #FFFFFE;
   --color-dark-500: #232946;
   --color-dark-800: #485284;
@@ -15,4 +16,9 @@ body, html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-dark-800);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
 }
