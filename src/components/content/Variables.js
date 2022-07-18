@@ -38,8 +38,8 @@ const Variables = ({variables, setVariables}) => {
     }
 
     return (
-        <div className='variables-section'>
-            <a href='/#variables'><h2 id='#variables'>Variables</h2></a>
+        <div id='variables' className='variables-section section'>
+            <a href='/#variables'><h2>Variables</h2></a>
             <hr/>
             <div className='var-inputs'>
                 <div className='input-group'>

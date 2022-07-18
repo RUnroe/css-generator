@@ -5,3 +5,14 @@
 .nav-panel.hidden {
     transform: translateX(-100%);
 }
+
+.nav-panel a {
+    color: var(--color-dark-800);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.1s ease;
+}
+
+.nav-panel a.active {
+    color: var(--color-primary-500);
+}
