@@ -140,3 +140,34 @@
 .variables-section .var-display-list button:hover img {
     filter: invert(57%) sepia(93%) saturate(5472%) hue-rotate(337deg) brightness(91%) contrast(72%);
 }
+
+.variables-section .color-picker {
+    height:16px;
+    width:16px;
+    padding:0 !important;
+    display: block;
+    position: absolute;
+    right:0.4rem;
+    bottom: 0.4rem;
+    z-index:15;
+    cursor: pointer;
+}
+.variables-section .color-picker div {
+    height:16px;
+    width:16px;
+    border-radius: 100vh;
+    position: absolute;
+    z-index:15;
+}
+
+#var-color-picker {
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: none;
+    background-color: var(--color-light-500);
+    position: relative;
+    bottom: 8px;
+    left:8px;
+    z-index:10;
+}

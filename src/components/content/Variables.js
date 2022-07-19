@@ -1,13 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import shortUUID from 'short-uuid';
 import './Content.css';
 import trashIcon from '../../icons/trash-icon.svg';
+import { useFirstRender } from '../../hooks/useFirstRender';
 
 const Variables = ({variables, setVariables}) => {
     
-
+    const firstRender = useFirstRender();
     const [newVarProperty, setNewVarProperty] = useState('');
     const [newVarValue, setNewVarValue] = useState('');
+    const [color, setColor] = useState('#b8c1ec');
+
+    useEffect(() => {
+        if(!firstRender && color) {
+            setNewVarValue(color);
+        }
+    }, [color]);
 
     const addVar = () => {
         let tempVariables = [...variables];
@@ -46,16 +54,20 @@ const Variables = ({variables, setVariables}) => {
                     <label htmlFor='var-property'>Property</label>
                     <input id='var-property' value={newVarProperty} onChange={evt => setNewVarProperty(evt.target.value)}/>
                 </div>
-                <div className='input-group'>
+                <div className='input-group relative'>
                     <label htmlFor='var-value'>Value</label>
                     <input id='var-value' value={newVarValue} onChange={evt => setNewVarValue(evt.target.value)}/>
+                    <label className='color-picker' htmlFor='var-color-picker'>
+                        <div style={{backgroundColor: color}}></div>
+                        <input type='color' id='var-color-picker' value={color} onChange={evt => setColor(evt.target.value)}/>
+                    </label>
                 </div>
                 <button onClick={addVar}>+</button>
             </div>
             <div className='var-display-list'>
                 {variables?.map((v) => {
                     return (
-                    <div>
+                    <div key={`var${v.id}`}>
                         <input type="text" value={v.property} onChange={(evt) => updateVar(v.id, "property", evt.target.value)}/>
                         <input type="text" value={v.value} onChange={(evt) => updateVar(v.id, "value", evt.target.value)}/>
                         <button onClick={() => deleteVar(v.id)}><img src={trashIcon} /></button>
