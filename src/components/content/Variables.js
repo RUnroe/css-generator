@@ -3,6 +3,8 @@ import shortUUID from 'short-uuid';
 import './Content.css';
 import trashIcon from '../../icons/trash-icon.svg';
 import { useFirstRender } from '../../hooks/useFirstRender';
+import toast from 'react-hot-toast';
+
 
 const Variables = ({variables, setVariables}) => {
     
@@ -26,6 +28,10 @@ const Variables = ({variables, setVariables}) => {
             value: newVarValue
         }); 
         setVariables(tempVariables);
+
+        toast.success("Variable Created");
+
+        //reset values
         setNewVarProperty('');
         setNewVarValue('');
     }
@@ -42,7 +48,8 @@ const Variables = ({variables, setVariables}) => {
     }
 
     const deleteVar = (id) => {
-        setVariables(variables.filter((v) => v.id !== id))
+        setVariables(variables.filter((v) => v.id !== id));
+        toast.success("Variable Deleted");
     }
 
     return (
