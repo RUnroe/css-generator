@@ -10,9 +10,16 @@
     color: var(--color-dark-800);
     font-weight: 600;
     text-decoration: none;
-    transition: color 0.1s ease;
+    width: 100%;
+    display: block;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid transparent;
+    transition: color 0.1s ease, background-color 0.2s ease, padding 0.2s ease;
 }
-
+.nav-panel a:hover {
+    background-color: var(--color-primary-000);
+    padding-left:0.5rem;
+}
 .nav-panel a.active {
     color: var(--color-primary-500);
 }

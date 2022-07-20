@@ -1,0 +1,40 @@
+/*==========================
+           Form
+============================*/
+.input-group label{
+    display: block;
+    color: #403d52;
+}
+  
+.input-group input:not([type="checkbox"]), .input-group select, .input-group textarea {
+    display: block;
+    padding:0.5rem;
+    background-color: #f1f1f1;
+    border:none;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top:0.5rem;
+    margin-bottom:0.5rem;
+    border-bottom:3px solid transparent;
+    width:100%;
+    box-sizing: border-box;
+    color: #403d52;
+}
+.input-group input:active:not(:disabled), .input-group input:focus:not(:disabled), .input-group select:focus:not(:disabled), .input-group textarea:focus:not(:disabled) {
+    outline:none;
+    border-bottom: 3px solid #403d52;
+}
+.input-group input[type="checkbox"] {
+    height: 1.1rem;
+    width: 1.1rem;
+}
+.input-group input[type="checkbox"]:not(:disabled) {
+    cursor: pointer;
+}
+.input-group select {
+    border-right: 0.5rem solid transparent;
+}
+.input-group input:disabled {
+    opacity: 0.75;
+}
+  

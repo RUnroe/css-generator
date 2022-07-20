@@ -54,14 +54,14 @@ const Variables = ({variables, setVariables}) => {
 
     return (
         <div id='variables' className='variables-section section'>
-            <a href='/#variables'><h2>Variables</h2></a>
+            <a href='#variables'><h2>Variables</h2></a>
             <hr/>
             <div className='var-inputs'>
-                <div className='input-group'>
+                <div className='content-input-group'>
                     <label htmlFor='var-property'>Property</label>
                     <input id='var-property' value={newVarProperty} onChange={evt => setNewVarProperty(evt.target.value)}/>
                 </div>
-                <div className='input-group relative'>
+                <div className='content-input-group relative'>
                     <label htmlFor='var-value'>Value</label>
                     <input id='var-value' value={newVarValue} onChange={evt => setNewVarValue(evt.target.value)}/>
                     <label className='color-picker' htmlFor='var-color-picker'>

@@ -21,6 +21,8 @@ const NavPanel = ({isOpen}) => {
     return (
         <div className={`nav-panel panel ${!isOpen ? "hidden" : ""}`}>
             <Link href="#variables" activeClass="active" smooth spy to="variables">Variables</Link>
+            <Link href="#form" activeClass="active" smooth spy to="form">Form</Link>
+            
         </div>
     );
   }
