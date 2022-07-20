@@ -28,7 +28,16 @@ h2 {
   font-size: 1.35rem;
   font-weight: 500;
 }
+h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
 
+h4 {
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
 input {
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 }
