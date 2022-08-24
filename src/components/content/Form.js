@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { vs2015 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
+import { railscasts } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 const Form = () => {
     const [formGroupCode, setFormGroupCode] = useState(`
 <div className="input-group">
@@ -12,7 +11,7 @@ const Form = () => {
     const [inputTypeCode, setInputTypeCode] = useState(`
 <div className="input-group">
     <label htmlFor="demo-textarea">Textarea Label:</label>
-    <textarea id="demo-textarea" type="text" textarea/>
+    <textarea id="demo-textarea"/>
     <input type="checkbox" />
     <input type="radio" />
     <select>
@@ -39,7 +38,7 @@ const Form = () => {
                         </div>
                     </div>
                 
-                    <SyntaxHighlighter language="html" style={vs2015}>
+                    <SyntaxHighlighter language="htmlbars" style={railscasts}>
                         {formGroupCode}
                     </SyntaxHighlighter>
 
@@ -49,7 +48,7 @@ const Form = () => {
                     <div className="demo-display">
                         <div className="input-group">
                             <label htmlFor="demo-textarea">Textarea Label:</label>
-                            <textarea id="demo-textarea" type="text" textarea/>
+                            <textarea id="demo-textarea"/>
                             <input type="checkbox" />
                             <input type="radio" />
                             <select>
@@ -60,7 +59,7 @@ const Form = () => {
                         </div>
                     </div>
                 
-                    <SyntaxHighlighter language="html" style={vs2015}>
+                    <SyntaxHighlighter language="htmlbars" style={railscasts}>
                         {inputTypeCode}
                     </SyntaxHighlighter>
 

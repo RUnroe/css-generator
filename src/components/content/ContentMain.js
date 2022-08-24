@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import './Content.css';
 import Form from './Form';
+import Type from './Type';
 import Variables from './Variables';
 
 const ContentMain = ({isLeftOpen, isRightOpen}) => {
@@ -13,6 +14,7 @@ const ContentMain = ({isLeftOpen, isRightOpen}) => {
         <div><Toaster/></div>
         <div className={`content-section ${isLeftOpen ? "left-open" : ""} ${isRightOpen ? "right-open" : ""}`}>
             <Variables variables={variables} setVariables={updateVariables}/>
+            <Type />
             <Form />
         </div>
         </>
