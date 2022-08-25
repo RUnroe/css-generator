@@ -13,9 +13,11 @@ const ContentMain = ({isLeftOpen, isRightOpen}) => {
         <>
         <div><Toaster/></div>
         <div className={`content-section ${isLeftOpen ? "left-open" : ""} ${isRightOpen ? "right-open" : ""}`}>
-            <Variables variables={variables} setVariables={updateVariables}/>
-            <Type />
-            <Form />
+            <div className='content-container'>
+                <Variables variables={variables} setVariables={updateVariables}/>
+                <Type />
+                <Form />
+            </div>
         </div>
         </>
     );
