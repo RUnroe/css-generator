@@ -7,7 +7,7 @@ const NavPanel = ({isOpen}) => {
 
     useEffect(() => {
         const handleScroll = event => {
-          console.log('window.scrollY', window.scrollY);
+          // console.log('window.scrollY', window.scrollY);
 
         };
     
