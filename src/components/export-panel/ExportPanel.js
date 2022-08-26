@@ -10,7 +10,11 @@ const ExportPanel = ({isOpen, exportData, removeExportData, variables, updateVar
     }
 
     const exportSectionToJSX = (key, value) => {
+        // console.log(value);
+        //If the value is falsey or it is an empty array, do not display anything in the export list
+        if(!value || (Array.isArray(value) && !value.length)) return <></>;
 
+        //Populate the children of the export list
         let children;
         if(key === "variables") {
             children = value.map((data, index) => (
@@ -23,7 +27,7 @@ const ExportPanel = ({isOpen, exportData, removeExportData, variables, updateVar
                 </div>
             ));
         }
-
+        //Generate the section and title for the export list
         return (
         <div className={`export-section ${key}`}>
             <p>{key}</p>

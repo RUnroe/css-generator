@@ -1,6 +1,7 @@
 :root {
   --color-light-100: #dededf;
-  --color-light-300: #f2efef;
+  --color-light-300: #f1f1f1;
+  /* --color-light-300: #f2efef; */
   --color-light-500: #FFFFFE;
   --color-dark-500: #232946;
   --color-dark-800: #485284;

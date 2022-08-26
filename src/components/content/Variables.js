@@ -59,14 +59,14 @@ const Variables = ({variables, setVariables}) => {
             <div className='var-inputs'>
                 <div className='content-input-group'>
                     <label htmlFor='var-property'>Property</label>
-                    <input id='var-property' value={newVarProperty} onChange={evt => setNewVarProperty(evt.target.value)}/>
+                    <input id='var-property' value={newVarProperty} onChange={evt => setNewVarProperty(evt.target.value)} autoComplete="off"/>
                 </div>
                 <div className='content-input-group relative'>
                     <label htmlFor='var-value'>Value</label>
                     <input id='var-value' value={newVarValue} onChange={evt => setNewVarValue(evt.target.value)}/>
                     <label className='color-picker' htmlFor='var-color-picker'>
                         <div style={{backgroundColor: color}}></div>
-                        <input type='color' id='var-color-picker' value={color} onChange={evt => setColor(evt.target.value)}/>
+                        <input type='color' id='var-color-picker' value={color} onChange={evt => setColor(evt.target.value)} autoComplete="off"/>
                     </label>
                 </div>
                 <button onClick={addVar}>+</button>
@@ -75,8 +75,8 @@ const Variables = ({variables, setVariables}) => {
                 {variables?.map((v) => {
                     return (
                     <div key={`var${v.id}`}>
-                        <input type="text" value={v.property} onChange={(evt) => updateVar(v.id, "property", evt.target.value)}/>
-                        <input type="text" value={v.value} onChange={(evt) => updateVar(v.id, "value", evt.target.value)}/>
+                        <input type="text" value={v.property} onChange={(evt) => updateVar(v.id, "property", evt.target.value)} autoComplete="off"/>
+                        <input type="text" value={v.value} onChange={(evt) => updateVar(v.id, "value", evt.target.value)} autoComplete="off"/>
                         <button onClick={() => deleteVar(v.id)}><img src={trashIcon} /></button>
                     </div>
                     );
