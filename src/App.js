@@ -35,7 +35,7 @@ const App = () => {
     // console.log(tempExportData);
     setExportData(tempExportData);
   }
-
+// Used for testing
   // useEffect(() => {
   //   addExportData("form>inputGroup", true);
   //   removeExportData("form>inputGroup");
@@ -62,8 +62,8 @@ const App = () => {
     <div className="app">
       <Header isLeftPanelOpen={isLeftPanelOpen} setLeftPanelOpen={setLeftPanelOpen} isRightPanelOpen={isRightPanelOpen} setRightPanelOpen={setRightPanelOpen}/>
       <NavPanel isOpen={isLeftPanelOpen}/>
-      <ExportPanel isOpen={isRightPanelOpen}/>
-      <ContentMain isLeftOpen={isLeftPanelOpen} isRightOpen={isRightPanelOpen}/>
+      <ExportPanel isOpen={isRightPanelOpen} exportData={exportData} removeExportData={removeExportData}/>
+      <ContentMain isLeftOpen={isLeftPanelOpen} isRightOpen={isRightPanelOpen} exportData={exportData} addExportData={addExportData} removeExportData={removeExportData} />
     </div>
   );
 }
