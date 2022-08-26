@@ -5,13 +5,7 @@ import Form from './Form';
 import Type from './Type';
 import Variables from './Variables';
 
-const ContentMain = ({isLeftOpen, isRightOpen, exportData, addExportData, removeExportData}) => {
-    const [variables, setVariables] = useState([]);
-    const updateVariables = (value) => {setVariables(value)};
-
-    useEffect(() => {
-        addExportData("variables", variables);
-    }, [variables]);
+const ContentMain = ({isLeftOpen, isRightOpen, variables, updateVariables, exportData, addExportData, removeExportData}) => {
 
     return (
         <>

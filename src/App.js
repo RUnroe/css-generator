@@ -11,6 +11,13 @@ const App = () => {
   const [exportData, setExportData] = useState({});
 
 
+  const [variables, setVariables] = useState([]);
+  const updateVariables = (value) => {setVariables(value)};
+
+  useEffect(() => {
+    addExportData("variables", variables);
+  }, [variables]);
+
   //Note objectKeyPath: separate path with '>'. (eg. 'form>inputGroup') 
   const separateObjectKeyPath = (objectKeyPath) => {
     return objectKeyPath.split(">");
@@ -62,8 +69,8 @@ const App = () => {
     <div className="app">
       <Header isLeftPanelOpen={isLeftPanelOpen} setLeftPanelOpen={setLeftPanelOpen} isRightPanelOpen={isRightPanelOpen} setRightPanelOpen={setRightPanelOpen}/>
       <NavPanel isOpen={isLeftPanelOpen}/>
-      <ExportPanel isOpen={isRightPanelOpen} exportData={exportData} removeExportData={removeExportData}/>
-      <ContentMain isLeftOpen={isLeftPanelOpen} isRightOpen={isRightPanelOpen} exportData={exportData} addExportData={addExportData} removeExportData={removeExportData} />
+      <ExportPanel isOpen={isRightPanelOpen} exportData={exportData} removeExportData={removeExportData} variables={variables} updateVariables={updateVariables}/>
+      <ContentMain isLeftOpen={isLeftPanelOpen} isRightOpen={isRightPanelOpen} variables={variables} updateVariables={updateVariables} exportData={exportData} addExportData={addExportData} removeExportData={removeExportData} />
     </div>
   );
 }

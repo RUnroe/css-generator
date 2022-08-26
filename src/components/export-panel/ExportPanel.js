@@ -1,9 +1,13 @@
 import { Fragment } from 'react';
 import '../Panel.css';
 import './ExportPanel.css';
+import toast from 'react-hot-toast';
 
-const ExportPanel = ({isOpen, exportData, removeExportData}) => {
-      
+const ExportPanel = ({isOpen, exportData, removeExportData, variables, updateVariables}) => {
+    const deleteVar = (id) => {
+        updateVariables(variables.filter((v) => v.id !== id));
+        toast.success("Variable Deleted");
+    }
 
     const exportSectionToJSX = (key, value) => {
 
@@ -12,10 +16,10 @@ const ExportPanel = ({isOpen, exportData, removeExportData}) => {
             children = value.map((data, index) => (
                 <div className='child' key={`variable${index}`}>
                     <div className='data'>
-                        <p>{data.property}</p>
+                        <p>{data.property}:</p>
                         <p>{data.value}</p>
                     </div>
-                    <button>✕</button>
+                    <button className='export-remove' onClick={() => {deleteVar(data.id)}}>✕</button>
                 </div>
             ));
         }
